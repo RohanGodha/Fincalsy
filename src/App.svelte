@@ -1,7 +1,21 @@
 <script>
-  import { each } from 'svelte/internal';
+import { each } from 'svelte/internal';
 import Card from './Card.svelte';
 import SICalc from './SICalc.svelte';
+import { db } from "./firebase.js";
+import { doc, getDoc } from "firebase/firestore";
+
+let fetchDocument=async()=>
+{
+  let docSnap = await getDoc(doc(db, "visitors","yoyorodha@gmail.com"));
+  if (docSnap.exists()) {
+  console.log("Document data:", docSnap.data());
+} else {
+  // doc.data() will be undefined in this case
+  console.log("No such document!");
+}
+}
+
   var name='Rohan Godha';
   let age=20;
   let lst=['A','B','C'];
