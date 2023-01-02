@@ -27,15 +27,16 @@ let fetchDocument=async()=>
   $: upperCase=name.toUpperCase();
   </script>
   <main>
+    {#if name=== 'Rohan Godha'}
+    <Card heading={'Title of Page'} paragraph={'Fincalsy'} />
+   {:else}
+    <Card heading={'Heading B'} paragraph={'Godha Paragraph'} />
+    {/if}
     <p>Hello World! Welcome to today's session. My name is <span class="text-underline">{upperCase}</span>. My age is {age}.</p>
     <button on:click={updateAge}>Click Me</button> <input type="text" bind:value={name}> 
     <h2>Financial Calculator</h2>
     <SICalc />
-     {#if name=== 'Rohan Godha'}
-    <Card heading={'Heading A'} paragraph={'Rohan Paragraph'} />
-   {:else}
-    <Card heading={'Heading B'} paragraph={'Godha Paragraph'} />
-    {/if}
+     
     {#each lst as l}
     <p>
       <Card heading={'Heading'+l} paragraph={'Rohan Godha Paragraph'} />
