@@ -16,7 +16,7 @@ export let paragraph;
 	text-transform: uppercase;
 	text-shadow: 0 2px white, 0 3px #777;
     }
-    /* h2 {
+    p {
 	margin: 1em 0 0.5em 0;
 	color: #343434;
 	font-weight: normal;
@@ -24,7 +24,7 @@ export let paragraph;
 	line-height: 40px;
 	font-family: 'Orienta', sans-serif;
 }
-
+/*
 h3 {
 	margin: 1em 0 0.5em 0;
 	color: #343434;
