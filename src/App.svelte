@@ -16,6 +16,7 @@
       console.log("No such document!");
     }
   };
+  
   fetchDocument();
   let fetchCollection=async()=>{
   const querySnapshot = await getDocs(query(collection(db,"visitors")));
@@ -23,25 +24,27 @@
     // doc.data() is never undefined for query doc snapshots
     console.log(doc.id, " => ", doc.data());
     visitors.push(doc.data());
+    visitors=[...visitors,doc.data()];
   });
+  //visitors=visitors;
 }
 fetchCollection();
 
-  var name = "Rohan Godha";
-  let age = 20;
-  let lst = ["A", "B", "C"];
-  let updateAge = () => {
-    age++;
-  };
+  // var name = "Rohan Godha";
+  // let age = 20;
+  // let lst = ["A", "B", "C"];
+  // let updateAge = () => {
+  //   age++;
+  // };
 
-  $: upperCase = name.toUpperCase();
+  // $: upperCase = name.toUpperCase();
 </script>
 
 <main>
   {#each visitors as visitor}
-  <p>{visitors.name}</p>
-  {/each}
-  {#if name === "Rohan Godha"}
+  <p>{visitors[0].name}</p>
+  {/each  }
+  <!-- {#if name === "Rohan Godha"}
     <Card heading={"Title of Page"} paragraph={"Fincalsy"} />
   {:else}
     <Card heading={"Heading B"} paragraph={"Godha Paragraph"} />
@@ -60,7 +63,7 @@ fetchCollection();
     <p>
       <Card heading={"Heading" + l} paragraph={"Rohan Godha Paragraph"} />
     </p>
-  {/each}
+  {/each} -->
 </main>
 
 <style>
