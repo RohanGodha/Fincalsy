@@ -1,6 +1,5 @@
 <h1><b> Fincalsy </b></h1>
-<h4> A compilation of free financial calculators involving mortgages, loans, investments, debt, retirement, and more.</h4>
-
+<h3> A compilation of free financial calculators involving mortgages, loans, investments, debt, retirement, and more.</h3>
 
 # Svelte + Vite
 
