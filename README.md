@@ -1,6 +1,6 @@
 <h1><b> Fincalsy </b></h1>
 <h3> A compilation of free financial calculators involving mortgages, loans, investments, debt, retirement, and more.</h3>
-
+<h4> I created this along with my team members.
 # Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
